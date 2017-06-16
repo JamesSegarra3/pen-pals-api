@@ -1,0 +1,26 @@
+# == Schema Information
+#
+# Table name: letters
+#
+#  id            :integer          not null, primary key
+#  writer_id     :integer
+#  receiver_id   :integer
+#  sent_time     :datetime
+#  readable_time :datetime
+#  created_at    :datetime         not null
+#  updated_at    :datetime         not null
+#
+
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  writer_id: 1
+  receiver_id: 1
+  sent_time: 2017-06-15 19:07:05
+  readable_time: 2017-06-15 19:07:05
+
+two:
+  writer_id: 1
+  receiver_id: 1
+  sent_time: 2017-06-15 19:07:05
+  readable_time: 2017-06-15 19:07:05

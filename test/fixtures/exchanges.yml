@@ -1,0 +1,23 @@
+# == Schema Information
+#
+# Table name: exchanges
+#
+#  id                 :integer          not null, primary key
+#  last_communication :datetime
+#  usera              :integer
+#  userb              :integer
+#  created_at         :datetime         not null
+#  updated_at         :datetime         not null
+#
+
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  last_communication: 2017-06-15 19:06:04
+  usera: 1
+  userb: 1
+
+two:
+  last_communication: 2017-06-15 19:06:04
+  usera: 1
+  userb: 1
