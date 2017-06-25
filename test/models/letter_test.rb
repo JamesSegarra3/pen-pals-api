@@ -2,13 +2,15 @@
 #
 # Table name: letters
 #
-#  id            :integer          not null, primary key
-#  writer_id     :integer
-#  receiver_id   :integer
-#  sent_time     :datetime
-#  readable_time :datetime
-#  created_at    :datetime         not null
-#  updated_at    :datetime         not null
+#  id          :integer          not null, primary key
+#  exchange_id :integer
+#  sender_id   :integer
+#  receiver_id :integer
+#  body        :string
+#  sent_time   :datetime
+#  reported    :boolean
+#  created_at  :datetime         not null
+#  updated_at  :datetime         not null
 #
 
 require 'test_helper'

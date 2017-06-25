@@ -10,9 +10,46 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 0) do
+ActiveRecord::Schema.define(version: 20170623221033) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "exchanges", force: :cascade do |t|
+    t.integer  "first_user_id"
+    t.integer  "second_user_id"
+    t.datetime "last_sent_time"
+    t.datetime "created_at",     null: false
+    t.datetime "updated_at",     null: false
+  end
+
+  create_table "letters", force: :cascade do |t|
+    t.integer  "exchange_id"
+    t.integer  "sender_id"
+    t.integer  "receiver_id"
+    t.string   "body"
+    t.datetime "sent_time"
+    t.boolean  "reported"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
+
+  create_table "users", force: :cascade do |t|
+    t.string   "first_name"
+    t.string   "last_name"
+    t.string   "email"
+    t.boolean  "reported"
+    t.boolean  "available"
+    t.boolean  "banned"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "users_exchanges", force: :cascade do |t|
+    t.integer  "user_id"
+    t.integer  "exchange_id"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
 
 end

@@ -2,22 +2,22 @@
 #
 # Table name: exchanges
 #
-#  id                 :integer          not null, primary key
-#  last_communication :datetime
-#  usera              :integer
-#  userb              :integer
-#  created_at         :datetime         not null
-#  updated_at         :datetime         not null
+#  id             :integer          not null, primary key
+#  first_user_id  :integer
+#  second_user_id :integer
+#  last_sent_time :datetime
+#  created_at     :datetime         not null
+#  updated_at     :datetime         not null
 #
 
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
-  last_communication: 2017-06-15 19:06:04
-  usera: 1
-  userb: 1
-
-two:
-  last_communication: 2017-06-15 19:06:04
-  usera: 1
-  userb: 1
+# This model initially had no columns defined. If you add columns to the
+# model remove the '{}' from the fixture names and add the columns immediately
+# below each fixture, per the syntax in the comments below
+#
+one: {}
+# column: value
+#
+two: {}
+# column: value

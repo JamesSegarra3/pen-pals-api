@@ -1,18 +1,15 @@
 # == Schema Information
 #
-# Table name: letters
+# Table name: users_exchanges
 #
 #  id          :integer          not null, primary key
+#  user_id     :integer
 #  exchange_id :integer
-#  sender_id   :integer
-#  receiver_id :integer
-#  body        :string
-#  sent_time   :datetime
-#  reported    :boolean
 #  created_at  :datetime         not null
 #  updated_at  :datetime         not null
 #
 
-class Letter < ApplicationRecord
+class UsersExchange < ApplicationRecord
+  belongs_to :user
   belongs_to :exchange
 end

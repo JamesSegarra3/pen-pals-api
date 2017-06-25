@@ -1,18 +1,18 @@
 # == Schema Information
 #
-# Table name: letters
+# Table name: users_exchanges
 #
 #  id          :integer          not null, primary key
+#  user_id     :integer
 #  exchange_id :integer
-#  sender_id   :integer
-#  receiver_id :integer
-#  body        :string
-#  sent_time   :datetime
-#  reported    :boolean
 #  created_at  :datetime         not null
 #  updated_at  :datetime         not null
 #
 
-class Letter < ApplicationRecord
-  belongs_to :exchange
+require 'test_helper'
+
+class UsersExchangeTest < ActiveSupport::TestCase
+  # test "the truth" do
+  #   assert true
+  # end
 end
