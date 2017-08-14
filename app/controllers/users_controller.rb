@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  before_action :authenticate, except: [:create]
+  before_action :authenticate_user, except: [:create]
   def index
     show
   end
@@ -16,11 +16,7 @@ class UsersController < ApplicationController
   end
 
   def show
-    def show
-      user = User.find_by(email: params[:email])
-      jwt = Auth.issue({user_id: user.id})
-      render json: {jwt: jwt, user_id: user.id, user_email: user.email, user_first_name: user.first_name}
-    end
+    render json: {what:"butt"}
   end
 
   def edit
